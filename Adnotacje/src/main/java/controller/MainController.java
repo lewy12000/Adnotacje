@@ -133,10 +133,10 @@ public class MainController {
                 m.invoke(object, Integer.parseInt(fieldValue));
             } else if (field.getGenericType().getTypeName() == enumValue) {
                 //System.out.println(className);
-                if(className.equals("Car")){
+                if(className.equals("beans.Car")){
                     Method m = object.getClass().getMethod("set" + methodName, Enum.class);
                     m.invoke(object, Enum.valueOf(CarType.class,fieldValue));
-                }else if(className.equals("Club")){
+                }else if(className.equals("beans.Club")){
                     Method m = object.getClass().getMethod("set" + methodName, Enum.class);
                     m.invoke(object, Enum.valueOf(ClubType.class, fieldValue));
                 }
