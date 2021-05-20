@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="626.0" prefWidth="864.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <children>
+      <Pane prefHeight="404.0" prefWidth="864.0">
+         <children>
+            <TableView fx:id="ObjectTable" prefHeight="212.0" prefWidth="864.0">
+              <columns>
+                <TableColumn fx:id="col_Name" prefWidth="245.0" text="test" />
+                <TableColumn fx:id="col_Value" minWidth="0.0" prefWidth="306.0" text="test2" />
+                  <TableColumn fx:id="col_Type" prefWidth="312.0" text="test3" />
+              </columns>
+            </TableView>
+            <ComboBox fx:id="FieldList" layoutX="282.0" layoutY="289.0" prefWidth="150.0" promptText="Field" />
+            <TextField fx:id="FieldValue" layoutX="432.0" layoutY="289.0" promptText="Value" />
+            <Button layoutX="387.0" layoutY="321.0" mnemonicParsing="false" onAction="#EditFieldValue" text="Change Value" />
+         </children>
+      </Pane>
+      <TextField fx:id="ClassName" layoutX="350.0" layoutY="498.0" prefHeight="25.0" prefWidth="156.0" promptText="beans.(CLub, Car, Student)" />
+      <Label layoutX="388.0" layoutY="469.0" text="Enter class name" />
+      <Button layoutX="406.0" layoutY="541.0" mnemonicParsing="false" onAction="#Start" text="Enter" />
+      <ComboBox fx:id="ObjectsList" layoutX="74.0" layoutY="498.0" onAction="#ChooseObject" prefWidth="150.0" promptText="Objects" />
+      <Button fx:id="" layoutX="105.0" layoutY="554.0" mnemonicParsing="false" onAction="#deleteObject" text="Delete Object" />
+   </children>
+</Pane>
